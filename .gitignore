@@ -1,0 +1,183 @@
+# 本文件同时约束版本提交和 OCR/代码审查范围。
+# 只排除可再生成、机器私有、含真实数据或不属于源码审查的内容；
+# 源码、测试、锁文件、需求、发布说明、验收报告和许可文件均保留。
+
+# JavaScript / Node 依赖与包管理器本地状态
+**/node_modules/
+**/.pnpm-store/
+**/.npm/
+**/.yarn/cache/
+**/.yarn/unplugged/
+**/.yarn/install-state.gz
+**/.pnp.*
+pnpm-debug.log*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# 前端编译产物、增量状态与工具缓存
+/开发文件夹/dist/
+/开发文件夹/build/
+/开发文件夹/out/
+/开发文件夹/.vite/
+/开发文件夹/.vitest/
+/开发文件夹/.cache/
+/开发文件夹/.parcel-cache/
+/开发文件夹/.rollup.cache/
+/开发文件夹/.turbo/
+/开发文件夹/.eslintcache
+*.tsbuildinfo
+
+# 测试、覆盖率、性能分析、截图与人工验收输出
+/开发文件夹/coverage/
+/开发文件夹/.nyc_output/
+/开发文件夹/playwright-report/
+/开发文件夹/blob-report/
+/开发文件夹/test-results/
+/开发文件夹/artifacts/
+coverage-final.json
+lcov.info
+*.lcov
+junit*.xml
+test-report*.xml
+*.profraw
+*.profdata
+
+# Rust / Cargo / Tauri 编译产物与可再生成资源
+/开发文件夹/target/
+/开发文件夹/src-tauri/target/
+/开发文件夹/src-tauri/gen/
+/开发文件夹/src-tauri/resources/fonts/core/
+/开发文件夹/src-tauri/resources/fonts/core.staging-*/
+/开发文件夹/src-tauri/resources/fonts/core.previous-*/
+*.rs.bk
+
+# 本项目构建、打包、校验和升级过程的临时目录
+/开发文件夹/build-cache/
+/开发文件夹/.build-cache/
+/开发文件夹/.tmp/
+/开发文件夹/tmp/
+/开发文件夹/temp/
+/成品文件夹/.upgrade-staging-*/
+/成品文件夹/发布包/.package.lock
+
+# 编译器、链接器和安装包生成物
+*.exe
+*.dll
+*.pdb
+*.ilk
+*.exp
+*.lib
+*.obj
+*.msi
+*.msix
+*.appx
+
+# Python 等偶然引入工具的虚拟环境与缓存（当前项目不依赖 Python）
+**/__pycache__/
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+.venv/
+venv/
+env/
+*.py[cod]
+
+# 日志、崩溃转储、临时文件与编辑器备份
+*.log
+*.log.*
+*.dmp
+*.dump
+*.stackdump
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+~$*
+*.bak
+*.backup
+*.old
+*.orig
+*.rej
+
+# IDE 个人状态；保留可共享的 VS Code 配置
+.idea/
+.vs/
+.fleet/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+*.code-workspace
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# 操作系统与文件管理器缓存
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# 本地环境、凭据和签名私钥；可提交的示例文件显式放行
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+!.env.*.example
+!.env.*.sample
+!.env.*.template
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.mobileprovision
+
+# 应用真实运行数据、用户导出、发布成品和历史备份
+/data/
+/开发文件夹/data/
+/开发文件夹/src-tauri/data/
+*.vcpbackup
+*.vcpproject
+/成品文件夹/
+
+# 用户本地保留的原始字体候选素材；核心白名单字体、manifest 与许可继续审查
+/开发文件夹/素材/字体候选库/
+
+# 安全扫描器、质量平台和依赖审计的本地缓存/机器输出
+**/.scannerwork/
+**/.sonar/
+**/.semgrep/
+**/.trivy/
+**/.grype/
+**/.snyk/
+**/.codacy/
+*.sarif
+*.sarif.json
+
+# OCR、AI 和代码审查生成的中间图像、报告与导出目录
+**/审查报告-*
+**/代码审查报告-*
+**/AI审查报告-*
+**/OCR审查报告-*
+**/ocr-report*
+**/OCR-report*
+**/ocr-scan-report*
+**/review-report*
+**/ai-review-report*
+**/audit-report*
+**/scan-report*
+**/ocr-output/
+**/OCR-output/
+**/review-output/
+**/scan-output/

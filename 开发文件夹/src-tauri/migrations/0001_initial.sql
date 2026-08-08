@@ -1,0 +1,5 @@
+-- 实际迁移由 src-tauri/src/db.rs 中的幂等迁移器执行；此文件只保存审计标记，
+-- 避免维护第二份可执行 schema。scripts/audit-schema-version.mjs 会阻止两处版本漂移。
+-- schema_version = 2
+-- v1: initial-v1
+-- v2: font-metadata-v2

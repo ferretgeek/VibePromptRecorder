@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "generatedForVersion": "0.1.4",
+  "policy": {
+    "allowedWeights": [400, 500, 600, 700],
+    "sourceDirectoryBundled": false,
+    "totalBytes": 84075932
+  },
+  "families": [
+    {
+      "family": "MiSans",
+      "copyrightOwner": "Xiaomi",
+      "licenseFile": "LICENSES/fonts/MiSans-License-zh.pdf",
+      "source": "https://hyperos.mi.com/font/zh/download",
+      "redistributionStatus": "approved-for-personal-bundle-under-attached-license",
+      "files": [
+        {
+          "file": "MiSans-Normal.ttf",
+          "weight": 400,
+          "bytes": 7943504,
+          "sha256": "fe0adb56147299e53d5b208a561d6ca7fe4ce5c727a5ead38ad9827b26024f3a"
+        },
+        {
+          "file": "MiSans-Medium.ttf",
+          "weight": 500,
+          "bytes": 7876052,
+          "sha256": "93528275ee67039c1daeb2ef700625bcf72abab2d3f97e1b6afae6273b579fc1"
+        },
+        {
+          "file": "MiSans-Semibold.ttf",
+          "weight": 600,
+          "bytes": 7824000,
+          "sha256": "7143f0160b52fa639c464f8dc904f01e1c1d28a6c514dd8d1fb99fcf28886258"
+        },
+        {
+          "file": "MiSans-Bold.ttf",
+          "weight": 700,
+          "bytes": 7804780,
+          "sha256": "250fb5c8d4657f103e332b0b948a995e45f2c159beb8d0528424e2d32ae421be"
+        }
+      ]
+    },
+    {
+      "family": "HarmonyOS Sans SC",
+      "copyrightOwner": "Huawei",
+      "licenseFile": "LICENSES/fonts/HarmonyOS-Sans-SC-LICENSE.txt",
+      "source": "local-authorized-candidate-library",
+      "redistributionStatus": "approved-under-attached-license",
+      "files": [
+        {
+          "file": "HarmonyOS-Sans-SC-Regular.ttf",
+          "weight": 400,
+          "bytes": 8261128,
+          "sha256": "297b088424be212207df2ce8b98e335468b782aa6b96832af0b8b773d711e2b1"
+        },
+        {
+          "file": "HarmonyOS-Sans-SC-Medium.ttf",
+          "weight": 500,
+          "bytes": 8227312,
+          "sha256": "6ed1553edccddc48eb27ff25d134a4a715cf54211238d4840b3038576cba1944"
+        },
+        {
+          "file": "HarmonyOS-Sans-SC-Bold.ttf",
+          "weight": 700,
+          "bytes": 8158996,
+          "sha256": "43a424b85e47fb53a17b3b32026a71801f86f8e022ca6798d186b47d39fa5f01"
+        }
+      ]
+    },
+    {
+      "family": "Mona Sans",
+      "copyrightOwner": "GitHub",
+      "licenseFile": "LICENSES/fonts/Mona-Sans-OFL-1.1.txt",
+      "source": "local-authorized-candidate-library",
+      "redistributionStatus": "SIL-OFL-1.1",
+      "files": [
+        {
+          "file": "Mona-Sans.woff2",
+          "weight": "400-700-variable",
+          "bytes": 133748,
+          "sha256": "6bde7bbfcd77d21bf13d8d2199e4299f66d24e9a69c231ae674266951f5c3a6c"
+        }
+      ]
+    },
+    {
+      "family": "Sarasa Mono SC",
+      "copyrightOwner": "Sarasa Gothic contributors",
+      "licenseFile": "LICENSES/fonts/Sarasa-Gothic-OFL-1.1.txt",
+      "source": "https://github.com/be5invis/Sarasa-Gothic/releases/tag/v1.0.37",
+      "redistributionStatus": "SIL-OFL-1.1",
+      "files": [
+        {
+          "file": "Sarasa-Mono-SC-Regular.ttf",
+          "weight": 400,
+          "bytes": 14036956,
+          "sha256": "ca00b8e8589ad7df27b714b3a148584499900898baa2f01264da607ce9ca9fc2"
+        },
+        {
+          "file": "Sarasa-Mono-SC-Bold.ttf",
+          "weight": 700,
+          "bytes": 13809456,
+          "sha256": "feee32972219afcf7eb6301a72c4fa2dd0ac5bb32d6deb4fd422250c3baccca6"
+        }
+      ]
+    }
+  ]
+}

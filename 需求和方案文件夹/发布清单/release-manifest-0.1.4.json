@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 2,
+  "version": "0.1.4",
+  "builtAt": "2026-07-31T12:51:50.8645405Z",
+  "artifactKind": "personal-use",
+  "artifactStatus": "LOCAL_PASS_EXTERNAL_PENDING",
+  "formalReleaseEligible": false,
+  "externalAcceptanceClaimed": false,
+  "distributionScope": "current-user-personal-use",
+  "sourceState": "verified-working-tree",
+  "target": "x86_64-pc-windows-msvc",
+  "codeSigning": "unsigned",
+  "executableSha256": "917dc74265aab3060b740df5cf67d4e8212e46a5c31f8c2b4bbe747c4516d8fa",
+  "pnpmLockSha256": "0aa716c80f89164c303f878c800551f9295d0c710c4f1a071ab4767403d90f6a",
+  "cargoLockSha256": "00b8e1f4b29b35a15def69d35b2822bb1f6093564b93cd01fc55fd13199b395a",
+  "requirements": {
+    "total": 256,
+    "unverified": 0,
+    "externalPending": [
+      {
+        "id": "2.6.9",
+        "status": "EXTERNAL_PENDING",
+        "notes": "代码与浏览器缩放代理已通过；仍需在五档真实 Windows DPI 上人工验收"
+      },
+      {
+        "id": "3.1",
+        "status": "LOCAL_PASS_EXTERNAL_PENDING",
+        "notes": "本机浏览器壳和真实 EXE 已启动；20 次双系统冷/热启动需外部机补测"
+      },
+      {
+        "id": "6.2.7",
+        "status": "LOCAL_PASS_EXTERNAL_PENDING",
+        "notes": "组合事件与中文文本已自动化通过；微软拼音候选窗仍需真人输入验收"
+      },
+      {
+        "id": "7.2",
+        "status": "LOCAL_PASS_EXTERNAL_PENDING",
+        "notes": "本机 Win11 发布 EXE 已通过；Win10 22H2 干净机需外部验收"
+      },
+      {
+        "id": "7.8",
+        "status": "IMPLEMENTED_EXTERNAL_PENDING",
+        "notes": "原生缺失分支已实现；当前机器已安装 WebView2，无法物理移除验证"
+      }
+    ]
+  },
+  "verification": {
+    "frozenInstall": "passed",
+    "formatLintTypecheck": "passed",
+    "unitAndRustTests": "passed",
+    "browserE2e": "passed",
+    "windowsX64ReleaseBuild": "passed",
+    "packageTreeAndReexpandedZip": "passed"
+  },
+  "zip": "提示词记录工具-0.1.4-portable.zip",
+  "zipBytes": 59782857,
+  "zipSha256": "85fffba114b00ec8b2cd46431618e7c54015bc15f7a84ef98ffc32db14990892"
+}
