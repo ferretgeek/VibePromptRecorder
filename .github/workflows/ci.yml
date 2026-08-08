@@ -34,4 +34,4 @@ jobs:
       - name: Verify web application
         run: pnpm lint && pnpm typecheck && pnpm test && pnpm build:web
       - name: Verify Rust core
-        run: cargo fmt --manifest-path src-tauri/Cargo.toml --all -- --check; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; cargo clippy --manifest-path src-tauri/Cargo.toml --locked --workspace --all-targets -- -D warnings; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; cargo test --manifest-path src-tauri/Cargo.toml --locked
+        run: pnpm verify:rust
