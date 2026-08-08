@@ -190,7 +190,7 @@ fn cleanup_stale_export_temps(parent: &Path) -> AppResult<usize> {
                 name.strip_prefix(".vpr-all-export-")
                     .and_then(|value| value.strip_suffix(".tmp"))
             });
-        if !id.is_some_and(|value| Uuid::parse_str(value).is_ok()) {
+        if id.is_none_or(|value| Uuid::parse_str(value).is_err()) {
             continue;
         }
         let stale = entry
