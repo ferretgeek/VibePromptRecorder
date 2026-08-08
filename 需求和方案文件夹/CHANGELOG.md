@@ -20,6 +20,7 @@
 ### 依赖与发布
 
 - 更新 `plist`/`quick-xml`、`time` 等通告涉及链路，移除 `tauri-plugin-dialog` 和 `ttf-parser` 直接依赖；Rust 最低版本调整为 1.89。
+- 当前锁定的 SQLite 构建链路使用 Rust 1.95 稳定的 `cfg_select!`，公开源码的最低 Rust 版本与 CI 同步提升至 1.95。
 - Rust 验证和便携打包在任何字体相关测试前固定执行 `prepare:tauri`，支持干净构建目录。
 - 发行脚本不再保留历史 manifest，并在新版成功落盘后只清理明确匹配的旧版 ZIP、哈希和依赖清单。
 

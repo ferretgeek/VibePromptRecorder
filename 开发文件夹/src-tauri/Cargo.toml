@@ -4,7 +4,7 @@ version = "0.1.4"
 description = "本地离线的 Vibe Coding 提示词记录工具"
 authors = ["ferretgeek"]
 edition = "2024"
-rust-version = "1.89"
+rust-version = "1.95"
 
 [lib]
 name = "vibe_prompt_recorder_lib"

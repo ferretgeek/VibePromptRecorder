@@ -34,7 +34,7 @@ Vibe Prompt Recorder 是一个面向 Windows 10/11 的本地离线提示词工�
 
 ### 开发与验证
 
-需要 Node.js 22、pnpm 10、Rust 1.89+、Windows WebView2 与 Tauri 2 构建环境。
+需要 Node.js 22、pnpm 10、Rust 1.95+、Windows WebView2 与 Tauri 2 构建环境。
 
 ```powershell
 cd 开发文件夹
@@ -84,7 +84,7 @@ Vibe Prompt Recorder is an offline, local-first prompt workspace for Windows 10 
 
 ### Development
 
-Install Node.js 22, pnpm 10, Rust 1.89+, Windows WebView2, and the Tauri 2 prerequisites:
+Install Node.js 22, pnpm 10, Rust 1.95+, Windows WebView2, and the Tauri 2 prerequisites:
 
 ```powershell
 cd 开发文件夹

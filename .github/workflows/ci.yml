@@ -24,7 +24,7 @@ jobs:
           node-version: "22"
           cache: pnpm
           cache-dependency-path: 开发文件夹/pnpm-lock.yaml
-      - uses: dtolnay/rust-toolchain@1.89.0
+      - uses: dtolnay/rust-toolchain@1.95.0
         with:
           components: rustfmt, clippy
       - name: Install dependencies
