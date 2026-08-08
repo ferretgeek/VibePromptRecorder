@@ -1,0 +1,2 @@
+# Generated trace tables are compared byte-for-byte in CI.
+*.csv text eol=lf
