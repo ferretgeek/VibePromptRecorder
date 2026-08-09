@@ -232,12 +232,12 @@
 :root[data-theme='graphite'],
 :root[data-theme='system'][data-resolved-theme='dark'] {
   color-scheme: dark;
-  --bg-app: #0d0f12;
-  --bg-topbar: rgba(14, 17, 21, 0.97);
-  --bg-sidebar: #101318;
-  --bg-panel: #13171c;
-  --bg-elevated: #191e25;
-  --bg-soft: #171b21;
+  --bg-app: #17191d;
+  --bg-topbar: rgba(23, 25, 29, 0.97);
+  --bg-sidebar: #1a1c21;
+  --bg-panel: #1d2025;
+  --bg-elevated: #242830;
+  --bg-soft: #202329;
   --bg-hover: #202630;
   --bg-selected: #1a2c43;
   --text-primary: #f2f5f9;
