@@ -2,7 +2,7 @@
   <img src="./docs/images/social-preview.png" alt="Vibe Prompt Recorder — local-first prompt workflow for Windows" width="100%" />
 </p>
 
-# Vibe Prompt Recorder · 提示词记录工具
+# Vibe Prompt Recorder — AI 编程提示词记录 / AI Coding Prompt Recorder
 
 [![CI](https://github.com/ferretgeek/VibePromptRecorder/actions/workflows/ci.yml/badge.svg)](https://github.com/ferretgeek/VibePromptRecorder/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-2563eb.svg)](./LICENSE)
