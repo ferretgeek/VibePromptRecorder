@@ -1,10 +1,8 @@
 import { AlertTriangle, Copy, Database, LoaderCircle, Plus, RefreshCcw } from 'lucide-react'
-import { useEffect, useRef, useState } from 'react'
+import { lazy, Suspense, useEffect, useRef, useState } from 'react'
 import { DetailPane } from '../features/editor/DetailPane'
 import { ConflictDialog } from '../features/editor/ConflictDialog'
 import { ProjectSidebar } from '../features/projects/ProjectSidebar'
-import { SearchDialog } from '../features/search/SearchDialog'
-import { SettingsDialog } from '../features/settings/SettingsDialog'
 import { Timeline } from '../features/timeline/Timeline'
 import { api, writeClipboard, isTauri } from '../lib/api'
 import {
@@ -18,6 +16,16 @@ import { useAppStore } from '../stores/appStore'
 import { Dialog } from '../components/Dialog'
 import { Toast } from '../components/Toast'
 import { TopBar } from './TopBar'
+
+// 搜索与设置只在用户主动打开时需要；延迟加载可缩短常规启动的下载、解析与初始化路径。
+const SearchDialog = lazy(() =>
+  import('../features/search/SearchDialog').then((module) => ({ default: module.SearchDialog })),
+)
+const SettingsDialog = lazy(() =>
+  import('../features/settings/SettingsDialog').then((module) => ({
+    default: module.SettingsDialog,
+  })),
+)
 
 function LoadingScreen() {
   return (
@@ -574,8 +582,16 @@ export function App() {
           <NoProjectPane />
         )}
       </main>
-      <SearchDialog />
-      <SettingsDialog />
+      {searchOpen ? (
+        <Suspense fallback={<span className="sr-only">正在打开搜索</span>}>
+          <SearchDialog />
+        </Suspense>
+      ) : null}
+      {settingsOpen ? (
+        <Suspense fallback={<span className="sr-only">正在打开设置</span>}>
+          <SettingsDialog />
+        </Suspense>
+      ) : null}
       <ConflictDialog />
       <Dialog
         open={Boolean(closeFailure)}

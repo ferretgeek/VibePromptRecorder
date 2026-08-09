@@ -1,5 +1,4 @@
-import { createJavaScriptRegexEngine } from '@shikijs/engine-javascript'
-import { createHighlighterCore, type HighlighterCore } from 'shiki/core'
+import type { HighlighterCore } from 'shiki/core'
 
 const languageLoaders = {
   json: () => import('@shikijs/langs/json'),
@@ -52,11 +51,18 @@ const loaded = new Set<string>()
 const loading = new Map<string, Promise<void>>()
 
 function getHighlighter(): Promise<HighlighterCore> {
-  highlighterPromise ??= createHighlighterCore({
-    themes: [import('@shikijs/themes/github-light'), import('@shikijs/themes/github-dark')],
-    langs: [],
-    engine: createJavaScriptRegexEngine(),
-  })
+  // 代码高亮只在非紧凑预览真的出现代码块时需要。核心和 JS 正则引擎都延迟加载，
+  // 避免普通启动与纯文本时间线先解析约数百 KiB 的 Shiki 运行时。
+  highlighterPromise ??= Promise.all([
+    import('shiki/core'),
+    import('@shikijs/engine-javascript'),
+  ]).then(([{ createHighlighterCore }, { createJavaScriptRegexEngine }]) =>
+    createHighlighterCore({
+      themes: [import('@shikijs/themes/github-light'), import('@shikijs/themes/github-dark')],
+      langs: [],
+      engine: createJavaScriptRegexEngine(),
+    }),
+  )
   return highlighterPromise
 }
 

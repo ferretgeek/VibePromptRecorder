@@ -53,6 +53,8 @@ pnpm build:web
 
 完整使用说明见 [`需求和方案文件夹/README-使用说明.md`](./需求和方案文件夹/README-使用说明.md)，架构、恢复和验收事实见 [`需求和方案文件夹/README.md`](./需求和方案文件夹/README.md)。
 
+安装、升级、备份、恢复、健康检查、卸载和故障处理见 [`docs/OPERATIONS.md`](./docs/OPERATIONS.md)；参与开发前请阅读 [`CONTRIBUTING.md`](./CONTRIBUTING.md)，版本变化见 [`CHANGELOG.md`](./CHANGELOG.md)。
+
 ### 目录
 
 ```text
@@ -65,6 +67,7 @@ docs/images/             脱敏后的真实预览与分享封面
 ### 隐私与边界
 
 - 默认离线运行，不接入任何 AI 模型、云同步、账号系统或遥测服务。
+- 产品数据与 SQLite 事务依赖单机文件锁、Windows 权限和本地 WebView2，因此不提供伪装成服务器版的共享数据目录或 Web 管理台；多设备迁移使用退出后的完整目录复制或经校验的备份。
 - 远程图片只在用户内容明确引用时按安全策略加载；本地 Markdown 预览会执行清洗。
 - 活动数据目录不应放在 UNC、映射网络驱动器或实时同步目录中。
 - 首次公开版本只发布源码；本机个人便携包、用户数据库和历史备份不会上传。
@@ -93,6 +96,8 @@ pnpm verify
 ```
 
 The first public version publishes source code only. Personal portable packages, user databases, and historical backups remain excluded. See the Chinese documentation index for the complete release and verification boundary.
+
+This product relies on single-machine file locking, Windows permissions, local WebView2, and SQLite transactions. It intentionally does not present a shared data directory or web panel as a server edition; move between devices only after exit by copying the complete portable directory or by using a validated backup. See [`docs/OPERATIONS.md`](./docs/OPERATIONS.md), [`CONTRIBUTING.md`](./CONTRIBUTING.md), and [`CHANGELOG.md`](./CHANGELOG.md) for lifecycle, contribution, and release details.
 
 ## License
 

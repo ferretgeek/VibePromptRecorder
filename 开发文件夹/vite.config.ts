@@ -21,7 +21,8 @@ export default defineConfig({
     target: 'es2022',
     sourcemap: false,
     minify: 'esbuild',
-    chunkSizeWarningLimit: 1500,
+    // Milkdown/CodeMirror 编辑器按需加载；主启动包应远低于此上限，编辑器本身也必须保持在 1 MB 内。
+    chunkSizeWarningLimit: 1000,
   },
   test: {
     include: ['src/**/*.test.{ts,tsx}'],
