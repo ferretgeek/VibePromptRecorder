@@ -206,7 +206,7 @@ export function plainTextFromMarkdown(markdown: string): string {
     .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
     .replace(/^\s{0,3}(?:#{1,6}|>|[-+*]|\d+[.)])\s+/gm, '')
     .replace(/[*_~]/g, '')
-    .replace(/<[^>]+>/g, '')
+    .replace(/[<>]/g, '')
     .trim()
 }
 
